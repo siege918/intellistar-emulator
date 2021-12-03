@@ -1,14 +1,15 @@
 window.CONFIG = {
-  crawl: `Due to the discontinuation of Weather Underground's API, severe weather alerts, automatic geolookup, and doppler radar imagery are broken for now.`,
+  crawl: `Goo goo ga ga I am the peaceful baby.`,
   greeting: 'This is your weather',
   language: 'en-US', // Supported in TWC API
   countryCode: 'US', // Supported in TWC API (for postal key)
   units: 'e', // Supported in TWC API (e = English (imperial), m = Metric, h = Hybrid (UK)),
   unitField: 'imperial', // Supported in TWC API. This field will be filled in automatically. (imperial = e, metric = m, uk_hybrid = h)
-  loop: false,
+  loop: true,
   secrets: {
     twcAPIKey: 'd522aa97197fd864d36b418f39ebb323'
   },
+  "zip-code": 90210,
 
   // Config Functions (index.html settings manager)
   options: [],
@@ -28,12 +29,8 @@ window.CONFIG = {
     if (args.crawlText !== '') CONFIG.crawl = args.crawlText
     if (args.greetingText !== '') CONFIG.greeting = args.greetingText
     if (args.loop === 'y') CONFIG.loop = true
-    if(/(^\d{5}$)|(^\d{5}-\d{4}$)/.test(args['zip-code'])){
-      zipCode = args['zip-code'];
-    } else {
-      alert("Enter valid ZIP code");
-      return;
-    }
+    
+    zipCode = "98109";
     CONFIG.unitField = CONFIG.units === 'm' ? 'metric' : (CONFIG.units === 'h' ? 'uk_hybrid' : 'imperial')
     fetchCurrentWeather();
   },

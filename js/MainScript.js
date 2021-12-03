@@ -91,7 +91,7 @@ function setInformation(){
 }
 
 function setMainBackground(){
-  getElement('background-image').style.backgroundImage = 'url(https://picsum.photos/1920/1080/?random';
+  //getElement('background-image').style.backgroundImage = 'url(https://picsum.photos/1620/1080/?random&blur=8';
 }
 
 function checkStormMusic(){
@@ -465,7 +465,7 @@ var interpolateColor = function(color1, color2, factor) {
 
 const baseSize = {
     w: 1920,
-    h: 1080
+    h: 1200
 }
 
 window.onresize = resizeWindow;
@@ -481,7 +481,7 @@ function resizeWindow(){
       newScale = wh / baseSize.h;
   }
 
-  getElement('render-frame').style.transform = 'scale(' + newScale + ',' +  newScale + ')';
+  //getElement('render-frame').style.transform = 'scale(' + newScale + ',' +  newScale + ')';
 }
 
 function getElement(id){
