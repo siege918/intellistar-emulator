@@ -9,7 +9,6 @@ window.CONFIG = {
   secrets: {
     twcAPIKey: 'd522aa97197fd864d36b418f39ebb323'
   },
-  "zip-code": 90210,
 
   // Config Functions (index.html settings manager)
   options: [],
@@ -30,7 +29,8 @@ window.CONFIG = {
     if (args.greetingText !== '') CONFIG.greeting = args.greetingText
     if (args.loop === 'y') CONFIG.loop = true
     
-    zipCode = "98109";
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    zipCode = urlSearchParams.get('zip') || '90210';
     CONFIG.unitField = CONFIG.units === 'm' ? 'metric' : (CONFIG.units === 'h' ? 'uk_hybrid' : 'imperial')
     fetchCurrentWeather();
   },

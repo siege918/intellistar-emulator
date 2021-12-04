@@ -46,8 +46,8 @@ function toggleAdvancedSettings(){
 }
 
 function preLoadMusic(){
-  var index = Math.floor(Math.random() * 12) + 1;
-  music = new Audio("assets/music/" + index + ".wav");
+  var index = (new Date()).getHours();
+  music = new Audio("assets/music/" + index + ".mp3");
 }
 
 /* Set the timeline page order depending on time of day and if
@@ -96,7 +96,7 @@ function setMainBackground(){
 
 function checkStormMusic(){
   if(currentCondition.toLowerCase().includes("storm")){
-    music= new Audio("assets/music/storm.wav");
+    music= new Audio("assets/music/storm-new.wav");
   }
 }
 
