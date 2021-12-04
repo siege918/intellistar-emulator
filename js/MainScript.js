@@ -5,7 +5,7 @@ const SINGLE = [{name: "Alert", subpages: [{name: "single-alert-page", duration:
 const MULTIPLE = [{name: "Alerts", subpages: [{name: "multiple-alerts-page", duration: 7000}]},{name: "Now", subpages: [{name: "current-page", duration: 8000}, {name: "radar-page", duration: 8000}, {name: "zoomed-radar-page", duration: 8000}]},{name: "Tonight", subpages: [{name: "tonight-page", duration: 8000}]},{name: "Beyond", subpages: [{name: "tomorrow-page", duration: 8000}, {name: "7day-page", duration: 13000}]},]
 const WEEKDAY = ["SUN",  "MON", "TUES", "WED", "THU", "FRI", "SAT"];
 
-const jingle = new Audio("assets/music/jingle.wav")
+const jingle = new Audio("assets/music/jingle-new.wav")
 const crawlSpeed = 150;
 
 var isDay = true;
@@ -489,12 +489,12 @@ function getElement(id){
 }
 
 function showCrawl(){
-  getElement('crawler-container').classList.add("shown");
-  setTimeout(startCrawl, 400); // wait for the settings to fully animate out before starting
+  //getElement('crawler-container').classList.add("shown");
+  //setTimeout(startCrawl, 400); // wait for the settings to fully animate out before starting
 }
 
 function hideCrawl(){
-  getElement('crawler-container').classList.add("hidden");
+  //getElement('crawler-container').classList.add("hidden");
 }
 
 function startCrawl(){
